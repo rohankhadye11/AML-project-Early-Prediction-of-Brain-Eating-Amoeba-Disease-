@@ -1,0 +1,60 @@
+# ==============================================================================
+# Git Ignore - PAM AI-Ops Clinical Decision Support System
+# ==============================================================================
+
+# Node dependencies & Next.js build
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+build/
+dist/
+.turbo/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python cache & build
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+**/venv/
+.venv/
+**/.venv/
+env/
+**/env/
+ENV/
+
+# Environment variables
+.env
+.env*.local
+.env.local
+**/.env
+**/.env*.local
+
+# Testing & cache
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+
+# OS and IDE files
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
