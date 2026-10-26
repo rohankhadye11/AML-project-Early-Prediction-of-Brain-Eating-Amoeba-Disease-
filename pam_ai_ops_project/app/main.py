@@ -59,6 +59,15 @@ except Exception as exc:
     print(f"[CRITICAL ERROR] Failed to instantiate PAMPredictor: {exc}")
     predictor = None
 
+# Attach Phase 5/6 Multimodal Late Fusion & XAI Router (Grad-CAM & SHAP)
+try:
+    from api.main import app as xai_app
+    app.include_router(xai_app.router)
+    print("[PAM] Attached Phase 6 Multimodal & XAI Router (/api/predict_multimodal) to main API.")
+except Exception as exc:
+    print(f"[PAM Warning] Failed to attach XAI router: {exc}")
+
+
 
 def check_predictor_readiness():
     """Helper to verify model artifacts are loaded; raises HTTP 500 if unready."""

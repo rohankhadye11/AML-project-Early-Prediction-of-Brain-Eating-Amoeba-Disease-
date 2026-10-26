@@ -1,5 +1,5 @@
 # ==============================================================================
-# Git Ignore - PAM AI-Ops Clinical Decision Support System
+# Git Ignore - pam_ai_ops_project
 # ==============================================================================
 
 # Node dependencies & Next.js build
@@ -11,6 +11,8 @@ out/
 build/
 dist/
 .turbo/
+*.tsbuildinfo
+**/*.tsbuildinfo
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -43,6 +45,13 @@ ENV/
 .env.local
 **/.env
 **/.env*.local
+
+# Temporary Scratch & Test Outputs
+scratch/
+scratch_gradcam.png
+scratch_shap.png
+test_cam.png
+test_shap.png
 
 # Testing & cache
 .pytest_cache/
