@@ -9,6 +9,7 @@ node_modules/
 **/node_modules/
 .pnp
 .pnp.js
+package-lock.json.bak
 
 # ------------------------------------------------------------------------------
 # Next.js & Frontend Build Outputs
@@ -22,6 +23,8 @@ build/
 dist/
 **/dist/
 .turbo/
+*.tsbuildinfo
+**/*.tsbuildinfo
 next-env.d.ts.bak
 
 # ------------------------------------------------------------------------------
@@ -77,6 +80,20 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # ------------------------------------------------------------------------------
+# Temporary Scratch & Test Image Artifacts
+# ------------------------------------------------------------------------------
+scratch/
+**/scratch/
+scratch_gradcam.png
+**/scratch_gradcam.png
+scratch_shap.png
+**/scratch_shap.png
+test_cam.png
+**/test_cam.png
+test_shap.png
+**/test_shap.png
+
+# ------------------------------------------------------------------------------
 # Testing & Code Quality Tools
 # ------------------------------------------------------------------------------
 .pytest_cache/
@@ -109,4 +126,3 @@ $RECYCLE.BIN/
 .gemini/
 **/.gemini/
 .system_generated/
-scratch/
